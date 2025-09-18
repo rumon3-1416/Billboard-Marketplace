@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #ffffff;
+  --bg-secondary: #f7f6f9;
+  --primary: #6051ff;
+  --dark: #161624;
+  --text: #161624;
+  --text-secondary: #6f6f79;
+  --r-text: #ffffff;
+  --border: #dde0e6;
+  --light-border: #dde0e6;
+  --dark-border: #dde0e600;
+  --card: #ffffff;
+}
+
+[data-theme='dark'] {
+  --background: #161624;
+  --bg-secondary: #282835;
+  --text: #ffffff;
+  --r-text: #161624;
+  --text-secondary: #b4b4b4;
+  --border: #ffffff1f;
+  --light-border: #ffffff00;
+  --dark-border: #ffffff1f;
+  --card: #23232f;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-dark: var(--dark);
+  --color-bg: var(--background);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-text: var(--text);
+  --color-r-text: var(--r-text);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+  --color-light-border: var(--light-border);
+  --color-dark-border: var(--dark-border);
+  --color-card: var(--card);
+  --font-primary: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  background-color: var(--background);
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

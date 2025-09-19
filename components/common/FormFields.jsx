@@ -29,25 +29,21 @@ export const Input = ({
   return (
     <div className={`w-full h-max relative ${label && 'flex flex-col gap-2 md:gap-4'}`}>
       {label && <Label label={label} htmlFor={name || id} />}
-      {Icon && (
-        <Icon
-          className={`size-6 text-text-secondary absolute left-4 ${
-            error && helperText ? 'bottom-[50px]' : 'bottom-3.5'
-          }`}
+      <div className='w-full relative'>
+        {Icon && <Icon className='size-6 text-text-secondary absolute left-4 top-3.5' />}
+        <input
+          type={type}
+          name={name}
+          id={id}
+          placeholder={placeholder}
+          className={`${inputStyles} ${error && helperText && '!ring-red-500'} ${
+            Icon ? 'ps-[52px]' : 'ps-4'
+          } ${className}`}
+          {...props}
         />
-      )}
-      <input
-        type={type}
-        name={name}
-        id={id}
-        placeholder={placeholder}
-        className={`${inputStyles} ${error && helperText && '!ring-red-500'} ${
-          Icon ? 'ps-[52px]' : 'ps-4'
-        } ${className}`}
-        {...props}
-      />
-      {/* Error Message */}
-      {error && helperText && <p className='text-red-500 text-sm ml-1'>{helperText}</p>}
+        {/* Error Message */}
+        {error && helperText && <p className='text-red-500 text-sm mt-1 ml-1'>{helperText}</p>}
+      </div>
     </div>
   );
 };
@@ -64,18 +60,20 @@ export const Textarea = ({
   ...props
 }) => {
   return (
-    <div className={`w-full relative ${label && 'flex flex-col gap-2 md:gap-4'}`}>
+    <div className={`w-full ${label && 'flex flex-col gap-2 md:gap-4'}`}>
       {label && <Label label={label} htmlFor={name || id} />}
-      <textarea
-        name={name}
-        id={id}
-        placeholder={placeholder}
-        rows={rows}
-        className={`ps-4 resize-none ${inputStyles} ${error && helperText && '!ring-red-500'} ${className}`}
-        {...props}
-      />
-      {/* Error Message */}
-      {error && helperText && <p className='text-red-500 text-sm ml-1'>{helperText}</p>}
+      <div className='w-full relative'>
+        <textarea
+          name={name}
+          id={id}
+          placeholder={placeholder}
+          rows={rows}
+          className={`ps-4 resize-none ${inputStyles} ${error && helperText && '!ring-red-500'} ${className}`}
+          {...props}
+        />
+        {/* Error Message */}
+        {error && helperText && <p className='text-red-500 text-sm mt-1 ml-1'>{helperText}</p>}
+      </div>
     </div>
   );
 };
@@ -94,36 +92,40 @@ export const Select = ({
   ...props
 }) => {
   return (
-    <div className={`w-full h-max relative ${label && 'flex flex-col gap-2 md:gap-4'}`}>
+    <div className={`w-full h-max ${label && 'flex flex-col gap-2 md:gap-4'}`}>
       {label && <Label label={label} htmlFor={name || id} />}
-      <select
-        name={name}
-        id={id}
-        defaultValue={defaultValue}
-        className={`ps-4 !pe-12 appearance-none ${inputStyles} ${error && helperText && '!ring-red-500'} ${className}`}
-        {...props}
-      >
-        {children}
-        {options &&
-          options.map((opt, idx) => {
-            const { value, text, disabled, ...prop } = opt;
+      <div className='w-full relative'>
+        <select
+          name={name}
+          id={id}
+          defaultValue={defaultValue}
+          className={`ps-4 !pe-12 appearance-none ${inputStyles} ${
+            error && helperText && '!ring-red-500'
+          } ${className}`}
+          {...props}
+        >
+          {children}
+          {options &&
+            options.map((opt, idx) => {
+              const { value, text, disabled, ...prop } = opt;
 
-            return (
-              <option
-                key={idx}
-                value={value}
-                disabled={disabled}
-                {...prop}
-                className={`text-text bg-bg ${optionClassName}`}
-              >
-                {text}
-              </option>
-            );
-          })}
-      </select>
-      <ArrowDown className={`size-4 absolute right-4 ${error && helperText ? 'bottom-[54px]' : 'bottom-[18px]'}`} />
-      {/* Error Message */}
-      {error && helperText && <p className='text-red-500 text-sm ml-1'>{helperText}</p>}
+              return (
+                <option
+                  key={idx}
+                  value={value}
+                  disabled={disabled}
+                  {...prop}
+                  className={`text-text bg-bg ${optionClassName}`}
+                >
+                  {text}
+                </option>
+              );
+            })}
+        </select>
+        <ArrowDown className='size-4 absolute right-4 top-[18px]' />
+        {/* Error Message */}
+        {error && helperText && <p className='text-red-500 text-sm mt-1 ml-1'>{helperText}</p>}
+      </div>
     </div>
   );
 };

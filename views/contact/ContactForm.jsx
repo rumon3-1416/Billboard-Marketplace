@@ -49,25 +49,25 @@ const roleOptions = [
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const inputGroupsContainerStyle =
+  const inputGroupContainerStyle =
     'w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-x-[13px] gap-y-4 md:gap-y-6';
 
   return (
     <form onSubmit={e => e.preventDefault()} className='w-full space-y-6'>
       {/* First & Last Name */}
-      <div className={inputGroupsContainerStyle}>
+      <div className={inputGroupContainerStyle}>
         <Input label='First Name' name='first_name' id='first_name' placeholder='First Name' Icon={User} />
         <Input label='Last Name' name='last_name' id='last_name' placeholder='Last Name' Icon={User} />
       </div>
 
       {/* Phone & Email */}
-      <div className={inputGroupsContainerStyle}>
+      <div className={inputGroupContainerStyle}>
         <Input label='Phone No' name='phone' id='phone' type='number' placeholder='Phone No' Icon={Call} />
         <Input label='Email' name='email' id='email' type='email' placeholder='Email' Icon={Message} />
       </div>
 
       {/* Company Name & Role */}
-      <div className={inputGroupsContainerStyle}>
+      <div className={inputGroupContainerStyle}>
         <Select
           label='Company Name'
           options={companyNameOptions}

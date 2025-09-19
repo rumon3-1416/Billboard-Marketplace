@@ -1,13 +1,39 @@
-import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import { ThemeProvider } from 'next-themes';
 
 import './globals.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+const inter = localFont({
+  src: [
+    {
+      path: '../fonts/Inter-Regular.woff2',
+      weight: '400',
+      style: 'normal'
+    },
+    {
+      path: '../fonts/Inter-Medium.woff2',
+      weight: '500',
+      style: 'normal'
+    },
+    {
+      path: '../fonts/Inter-SemiBold.woff2',
+      weight: '600',
+      style: 'normal'
+    },
+    {
+      path: '../fonts/Inter-Bold.woff2',
+      weight: '700',
+      style: 'normal'
+    },
+    {
+      path: '../fonts/Inter-ExtraBold.woff2',
+      weight: '800',
+      style: 'normal'
+    }
+  ],
+  display: 'swap',
   variable: '--font-inter',
-  display: 'swap'
+  adjustFontFallback: false
 });
 
 export const metadata = {

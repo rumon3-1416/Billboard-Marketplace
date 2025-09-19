@@ -1,7 +1,12 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
 import IconBtn from '@/components/IconBtn';
 import { ArrowDown, CalendarFill, LocationFill, MagnifyingGlass, SuccessFill } from '@/public/assets/icons/icons';
 
-const HeroSearch = ({ className }) => {
+const SearchBar = ({ className }) => {
+  const pathname = usePathname();
+
   const btnStyles =
     'w-full h-full bg-transparent hover:bg-[#ffffff1f] hover:backdrop-blur-lg py-4 ps-4 transition-colors';
   const btnInnerStyles = 'w-full h-full py-3.5 flex justify-between items-center gap-3 border-[#FFFFFF1F]';
@@ -51,4 +56,4 @@ const HeroSearch = ({ className }) => {
   );
 };
 
-export default HeroSearch;
+export default SearchBar;

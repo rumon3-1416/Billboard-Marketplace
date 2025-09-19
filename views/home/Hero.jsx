@@ -1,17 +1,21 @@
-import HeroSearch from './HeroSearch';
+import SearchBar from '@/components/common/SearchBar';
 
 const Hero = () => {
   return (
     <section id='hero' className='relative h-[60vh] md:h-[70vh] lg:h-[90vh] xl:h-screen max-h-[728px] overflow-hidden'>
       {/* Bg Video */}
       <video
-        src='assets/videos/hero-bg.mp4'
+        width={1920}
+        height={1080}
         className='absolute inset-0 -z-50 w-full h-full object-cover'
         autoPlay
         loop
         muted
         playsInline
-      />
+        preload='auto'
+      >
+        <source src='/assets/videos/hero-bg.mp4' type='video/mp4' />
+      </video>
       <div className='bg-black/50 absolute inset-0 -z-40 w-full h-full object-cover'></div>
 
       {/* Spacer of the Header */}
@@ -28,7 +32,7 @@ const Hero = () => {
         </div>
 
         {/* Searchbar */}
-        <HeroSearch className='mt-8 md:mt-11 lg:mt-[60px]' />
+        <SearchBar className='mt-8 md:mt-11 lg:mt-[60px]' />
 
         <p className='text-white text-center text-lg mt-6 lg:mt-10'>
           Over{' '}

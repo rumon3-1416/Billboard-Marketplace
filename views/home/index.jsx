@@ -1,6 +1,6 @@
 import FeaturedBillboards from './FeaturedBillboards';
 import FindBillboards from './FindBillboards';
-import Hero from './hero';
+import Hero from './Hero';
 import WhyChooseUs from './WhyChooseUs';
 import NewBillboards from './NewBillboards';
 

@@ -6,6 +6,7 @@ import Logo from './Logo';
 import ThemeSwitcher from './ThemeSwitcher';
 import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
+import SearchBar from './common/SearchBar';
 
 const Header = () => {
   const pathname = usePathname();
@@ -40,12 +41,14 @@ const Header = () => {
       <nav className='container flex justify-between items-center'>
         <Logo variant={isScrolled && theme === 'light' ? 'black' : 'white'} className='h-[58px]' />
 
+        {pathname.includes('/search') && <SearchBar />}
+
         <div className='flex items-center gap-4'>
           <ThemeSwitcher iconColor={!isScrolled && pathname === '/' ? 'text-white' : ''} />
           <Button variant='outlined' textColor={!isScrolled && pathname === '/' ? 'white' : ''}>
             List Your Business
           </Button>
-          <Button variant='contained'>Log In</Button>
+          {!pathname.includes('/search') && <Button variant='contained'>Log In</Button>}
         </div>
       </nav>
     </header>

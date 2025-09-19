@@ -10,10 +10,10 @@ const Footer = () => {
           <Logo variant='white' className='w-[237px] h-[51px]' />
           <ul className='text-white mt-6 md:mt-8 lg:mt-10 flex justify-center flex-wrap gap-6 lg:gap-8'>
             <li>
-              <Link href='#'>About Us</Link>
+              <Link href='/about'>About Us</Link>
             </li>
             <li>
-              <Link href='#'>Contact</Link>
+              <Link href='/contact'>Contact</Link>
             </li>
             <li>
               <Link href='#'>Privacy Policy</Link>

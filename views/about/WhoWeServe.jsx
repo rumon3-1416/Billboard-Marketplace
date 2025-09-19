@@ -39,7 +39,7 @@ const WhoWeServe = () => {
           alt='img'
           width={720}
           height={582}
-          className='w-full max-w-[720px] h-full aspect-auto object-cover '
+          className='w-full max-w-[720px] h-full aspect-auto object-cover'
         />
       </div>
 

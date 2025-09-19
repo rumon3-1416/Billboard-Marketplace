@@ -2,13 +2,17 @@ const Banner = () => {
   return (
     <section className='relative h-[60vh] md:h-[70vh] lg:h-[90vh] xl:h-screen max-h-[592px] overflow-hidden'>
       <video
-        src='/assets/videos/hero-bg.mp4'
-        autoPlay
-        muted
-        loop
-        playsInline
+        width={1920}
+        height={1080}
         className='absolute inset-0 -z-50 w-full h-full object-cover'
-      />
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload='auto'
+      >
+        <source src='/assets/videos/hero-bg.mp4' type='video/mp4' />
+      </video>
       <div className='absolute inset-0 -z-40 w-full h-full bg-black/50'></div>
 
       <div className='container h-full py-8 sm:py-10 md:py-12 lg:py-[60px] flex items-end'>

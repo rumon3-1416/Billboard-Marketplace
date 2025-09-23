@@ -7,20 +7,26 @@ import { ArrowDown, CalendarFill, LocationFill, MagnifyingGlass, SuccessFill } f
 const SearchBar = ({ className }) => {
   const pathname = usePathname();
 
+  const homePage = pathname === '/';
+
   const btnStyles =
     'w-full h-full bg-transparent hover:bg-[#ffffff1f] hover:backdrop-blur-lg py-4 ps-4 transition-colors';
-  const btnInnerStyles = 'w-full h-full py-3.5 flex justify-between items-center gap-3 border-[#FFFFFF1F]';
-  const btnTextStyles = 'text-white text-lg font-medium leading-[1]';
+  const btnInnerStyles = `w-full h-full py-3.5 flex justify-between items-center gap-3 ${
+    homePage ? 'border-[#FFFFFF1F]' : 'border-border'
+  }`;
+  const btnTextStyles = `text-lg font-medium leading-[1] ${homePage ? 'text-white' : 'text-text'}`;
 
   return (
     <div
-      className={`relative w-[90%] max-w-[728px] bg-[#FFFFFF24] backdrop-blur-xs border border-white/20 rounded-full grid grid-cols-3 ${className}`}
+      className={`relative w-[90%] max-w-[728px] bg-[#FFFFFF24] backdrop-blur-xs border rounded-full grid grid-cols-3 ${
+        homePage ? 'border-white/20' : 'border-border'
+      } ${className}`}
     >
       {/* LocationFill */}
       <button className={`rounded-s-full ${btnStyles}`}>
         <span className={`pe-4 border-e ${btnInnerStyles}`}>
           <span className='flex items-center gap-3'>
-            <LocationFill className='text-white size-6' />
+            <LocationFill className={`size-6 ${homePage ? 'text-white' : 'text-primary'}`} />
             <span className={`${btnTextStyles}`}>LocationFill</span>
           </span>
           <ArrowDown className='text-[#B4B4B4] size-5' />
@@ -31,7 +37,7 @@ const SearchBar = ({ className }) => {
       <button className={`${btnStyles}`}>
         <span className={`pe-4 border-e ${btnInnerStyles}`}>
           <span className='flex items-center gap-3'>
-            <SuccessFill className='text-white size-6' />
+            <SuccessFill className={`size-6 ${homePage ? 'text-white' : 'text-primary'}`} />
             <span className={`${btnTextStyles}`}>Availability</span>
           </span>
           <ArrowDown className='text-[#B4B4B4] size-5' />
@@ -39,10 +45,10 @@ const SearchBar = ({ className }) => {
       </button>
 
       {/* Date */}
-      <button className={`rounded-e-full pe-18 ${btnStyles}`}>
-        <span className={`pe-4 ${btnInnerStyles}`}>
+      <button className={`rounded-e-full pe-[76px] ${btnStyles}`}>
+        <span className={`pe-3 ${btnInnerStyles}`}>
           <span className='flex items-center gap-3'>
-            <CalendarFill className='text-white size-6' />
+            <CalendarFill className={`size-6 ${homePage ? 'text-white' : 'text-primary'}`} />
             <span className={`${btnTextStyles}`}>Date</span>
           </span>
           <ArrowDown className='text-[#B4B4B4] size-5' />
@@ -50,7 +56,7 @@ const SearchBar = ({ className }) => {
       </button>
 
       <IconBtn variant='primary' className='-translate-y-1/2 !absolute right-4 top-1/2 !p-5'>
-        <MagnifyingGlass />
+        <MagnifyingGlass className='size-5' />
       </IconBtn>
     </div>
   );

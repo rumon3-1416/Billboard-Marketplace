@@ -11,10 +11,10 @@ const Button = ({ variant, size = 'default', textColor = '', className = '', chi
     <MuiButton
       variant={variant}
       sx={{
-        px: smSize ? '24px' : '28px',
-        py: smSize ? '16px' : '20px',
+        px: smSize ? { xs: '16px', md: '20px', lg: '24px' } : { xs: '20px', md: '24px', lg: '28px' },
+        py: smSize ? { xs: '12px', md: '14px', lg: '16px' } : { xs: '16px', md: '18px', lg: '20px' },
         lineHeight: 1,
-        fontSize: smSize ? '14px' : '16px',
+        fontSize: smSize ? { xs: '12px', md: '14px' } : { xs: '14px', md: '16px' },
         fontWeight: '500',
         borderRadius: '999px',
         textTransform: 'none'

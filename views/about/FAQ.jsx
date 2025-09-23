@@ -88,7 +88,7 @@ export default function FAQ() {
                 <AccordionSummary
                   expandIcon={<ArrowRight className='size-5' />}
                   sx={{
-                    fontSize: '20px',
+                    fontSize: { xs: '16px', md: '18px', lg: '20px' },
                     fontWeight: 500,
                     lineHeight: 1,
                     px: 0,
@@ -97,7 +97,8 @@ export default function FAQ() {
                     '& .MuiAccordionSummary-expandIconWrapper': {
                       fontSize: '20px',
                       lineHeight: 1,
-                      padding: isExpanded || (darkTheme && mounted) ? '14px' : '15px',
+                      padding:
+                        isExpanded || (darkTheme && mounted) ? { xs: '12px', md: '14px' } : { xs: '13px', md: '15px' },
                       margin: 0,
                       borderRadius: '999px',
                       border: isExpanded ? '1px solid #6051FF' : mounted && darkTheme ? '1px solid #ffffff1f' : 'none',

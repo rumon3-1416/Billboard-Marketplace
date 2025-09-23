@@ -1,8 +1,8 @@
-import SearchBar from '@/components/common/SearchBar';
+import SearchBar from '@/components/searchBar.jsx';
 
 const Hero = () => {
   return (
-    <section id='hero' className='relative h-[60vh] md:h-[70vh] lg:h-[90vh] xl:h-screen max-h-[728px] overflow-hidden'>
+    <section id='hero' className='relative h-screen max-h-[844px] md:max-h-[728px] overflow-hidden'>
       {/* Bg Video */}
       <video
         width={1920}
@@ -23,7 +23,7 @@ const Hero = () => {
 
       <div className='container h-[calc(100%-106px)] flex flex-col justify-center items-center'>
         <div className='max-w-[920px] mx-auto text-center'>
-          <h1 className='text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[70px] leading-[1] font-semibold mb-[30px]'>
+          <h1 className='text-white text-[42px] md:text-[56px] lg:text-[70px] leading-[1.05] font-medium md:font-semibold mb-5 md:mb-6 lg:mb-[30px]'>
             Discover & Book Billboards in One Place
           </h1>
           <p className='text-[#EEEEEE] text-sm sm:text-base md:text-lg leading-[1.5] max-w-[540px] mx-auto'>
@@ -32,11 +32,11 @@ const Hero = () => {
         </div>
 
         {/* Searchbar */}
-        <SearchBar className='mt-8 md:mt-11 lg:mt-[60px]' />
+        <SearchBar className='mt-10 md:mt-12 lg:mt-[60px]' />
 
-        <p className='text-white text-center text-lg mt-6 lg:mt-10'>
+        <p className='text-white text-center md:text-lg mt-[30px] mt-9 lg:mt-10'>
           Over{' '}
-          <span className='text-lg font-medium bg-gradient-to-r from-[#7367F0] to-[#FF5DA3] bg-clip-text text-transparent'>
+          <span className='md:text-lg font-medium bg-gradient-to-r from-[#7367F0] to-[#FF5DA3] bg-clip-text text-transparent'>
             5,200+
           </span>{' '}
           billboards booked today

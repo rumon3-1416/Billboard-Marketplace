@@ -210,6 +210,151 @@ export const Message = ({ className = '' }) => (
     />
   </svg>
 );
+export const Menu = ({ className = '' }) => (
+  <svg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg' className={className}>
+    <path d='M25 15L5 15' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+    <path d='M25 6.25H5' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+    <path d='M25 23.75H5' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round' />
+  </svg>
+);
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
+
+// export const icon = ({className = '' }) => ()
 
 // export const icon = ({className = '' }) => ()
 

@@ -11,7 +11,7 @@ const Logo = ({ variant = 'black', className = '' }) => {
           viewBox='0 0 166 58'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
-          className={className}
+          className={`w-max ${className}`}
         >
           <g clipPath='url(#clip0_990_13105)'>
             <path
@@ -94,7 +94,7 @@ const Logo = ({ variant = 'black', className = '' }) => {
           viewBox='0 0 166 58'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
-          className={className}
+          className={`w-max ${className}`}
         >
           <g clipPath='url(#clip0_990_13131)'>
             <path

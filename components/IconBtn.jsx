@@ -6,7 +6,7 @@ const IconBtn = ({ variant, className, children, ...props }) => {
   return (
     <IconButton
       sx={{
-        fontSize: { xs: '16px', md: '20px', lg: '24px' },
+        fontSize: { xs: '14px', ms: '16px', md: '20px', lg: '24px' },
         lineHeight: 1,
         padding: coloredBtn ? { xs: '14px', md: '16px', lg: '18px' } : { xs: '12px', md: '14px', lg: '16px' },
         margin: 0,

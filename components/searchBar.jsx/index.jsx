@@ -10,7 +10,7 @@ import AvailabilityField from './AvailabilityField';
 import DateField from './DateField';
 
 const SearchBar = ({ className }) => {
-  const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState('');
   const [availability, setAvailability] = useState(null);
   const [date, setDate] = useState(null);
 
@@ -18,7 +18,7 @@ const SearchBar = ({ className }) => {
   const homePage = pathname === '/';
 
   const fieldStyles = {
-    label: `w-full h-full bg-transparent hover:bg-[#ffffff1f] hover:backdrop-blur-lg px-4 md:px-0 md:py-4 transition-colors`,
+    label: `relative w-full h-full bg-transparent hover:bg-[#ffffff1f] hover:backdrop-blur-lg px-4 md:px-0 md:py-4 transition-colors`,
     inputContainer: `grid items-center gap-3 md:px-4 py-2 md:py-0 ${homePage ? 'border-[#FFFFFF1F]' : 'border-border'}`,
     input: `w-full h-full py-3.5 outline-none ${
       homePage ? 'placeholder-white text-white' : 'placeholder-text text-text'
@@ -45,6 +45,7 @@ const SearchBar = ({ className }) => {
       {/* Date */}
       <DateField date={date} setDate={setDate} fieldStyles={fieldStyles} homePage={homePage} />
 
+      {/* Search Btn */}
       <IconBtn
         variant='primary'
         className='md:!-translate-y-1/2 md:!absolute md:!top-1/2 md:!right-2.5 !p-3.5 lg:!p-5 !mx-5 md:!mx-0 !mt-1 !mb-5 md:!mt-0 md:!mb-0'

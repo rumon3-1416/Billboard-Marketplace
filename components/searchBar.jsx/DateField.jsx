@@ -1,8 +1,22 @@
 'use client';
 
 import { CalendarFill } from '@/public/assets/icons/icons';
+import DateDropdown from './DateDropdown';
+import { useState } from 'react';
 
 const DateField = ({ date, setDate, fieldStyles, homePage }) => {
+  const [showDropdown, setShowDropDown] = useState(false);
+
+  // let dateLabel = lang('anyDate');
+  // if (selectedDate === null) dateLabel = lang('anyDate');
+  // else if (selectedDate) {
+  //   const today = new Date();
+  //   const tomorrow = addDays(today, 1);
+  //   if (isSameDay(selectedDate, today)) dateLabel = lang('today');
+  //   else if (isSameDay(selectedDate, tomorrow)) dateLabel = lang('tomorrow');
+  //   else dateLabel = format(selectedDate, 'd MMM yyyy');
+  // }
+
   return (
     <label
       htmlFor='date'
@@ -21,6 +35,8 @@ const DateField = ({ date, setDate, fieldStyles, homePage }) => {
           readOnly
         />
       </div>
+
+      {<DateDropdown date={date} setDate={setDate} setShowDropDown={setShowDropDown} />}
     </label>
   );
 };

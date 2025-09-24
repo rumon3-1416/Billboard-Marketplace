@@ -2,7 +2,7 @@ import SearchBar from '@/components/searchBar.jsx';
 
 const Hero = () => {
   return (
-    <section id='hero' className='relative h-screen max-h-[844px] md:max-h-[728px] overflow-hidden'>
+    <section className='relative h-screen max-h-[844px] md:max-h-[728px]'>
       {/* Bg Video */}
       <video
         width={1920}
@@ -34,7 +34,7 @@ const Hero = () => {
         {/* Searchbar */}
         <SearchBar className='mt-10 md:mt-12 lg:mt-[60px]' />
 
-        <p className='text-white text-center md:text-lg mt-[30px] mt-9 lg:mt-10'>
+        <p className='text-white text-center md:text-lg mt-[30px] md:mt-9 lg:mt-10'>
           Over{' '}
           <span className='md:text-lg font-medium bg-gradient-to-r from-[#7367F0] to-[#FF5DA3] bg-clip-text text-transparent'>
             5,200+

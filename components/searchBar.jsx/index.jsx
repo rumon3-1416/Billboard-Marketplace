@@ -10,7 +10,7 @@ import AvailabilityField from './AvailabilityField';
 import DateField from './DateField';
 
 const SearchBar = ({ className }) => {
-  const [location, setLocation] = useState('');
+  const [location, setLocation] = useState(null);
   const [availability, setAvailability] = useState(null);
   const [date, setDate] = useState(null);
 
@@ -19,7 +19,9 @@ const SearchBar = ({ className }) => {
 
   const fieldStyles = {
     label: `relative w-full h-full bg-transparent hover:bg-[#ffffff1f] hover:backdrop-blur-lg px-4 md:px-0 md:py-4 transition-colors`,
-    inputContainer: `grid items-center gap-3 md:px-4 py-2 md:py-0 ${homePage ? 'border-[#FFFFFF1F]' : 'border-border'}`,
+    inputContainer: `grid grid-cols-[24px_1fr_20px] items-center gap-3 md:px-4 py-2 md:py-0 ${
+      homePage ? 'border-[#FFFFFF1F]' : 'border-border'
+    }`,
     input: `w-full h-full py-3.5 outline-none ${
       homePage ? 'placeholder-white text-white' : 'placeholder-text text-text'
     }`

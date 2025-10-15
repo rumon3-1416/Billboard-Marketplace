@@ -2,15 +2,15 @@ const LocationDropdown = ({ setLocation }) => {
   const locations = [
     {
       title: 'Current Location',
-      value: 'Current Location'
+      value: 'current-location'
     },
     {
       title: 'Location 1',
-      value: 'Location 1'
+      value: 'location-1'
     },
     {
       title: 'Location 2',
-      value: 'Location 2'
+      value: 'location-2'
     }
   ];
 
@@ -20,7 +20,7 @@ const LocationDropdown = ({ setLocation }) => {
     >
       {locations.map((location, idx) => (
         <li
-          onClick={() => setLocation(location.value)}
+          onClick={() => setLocation(location)}
           key={idx}
           className={`hover:bg-primary/10 px-2.5 py-1.5 cursor-pointer rounded-xl transition-colors`}
         >

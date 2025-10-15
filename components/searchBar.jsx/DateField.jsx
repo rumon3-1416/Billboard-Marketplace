@@ -1,28 +1,38 @@
 'use client';
 
-import { CalendarFill } from '@/public/assets/icons/icons';
+import { useEffect, useRef, useState } from 'react';
+
+import { ArrowDown, CalendarFill } from '@/public/assets/icons/icons';
 import DateDropdown from './DateDropdown';
-import { useState } from 'react';
+import ClearInput from './ClearInput';
 
 const DateField = ({ date, setDate, fieldStyles, homePage }) => {
+  const dateRef = useRef(null);
   const [showDropdown, setShowDropDown] = useState(false);
 
-  // let dateLabel = lang('anyDate');
-  // if (selectedDate === null) dateLabel = lang('anyDate');
-  // else if (selectedDate) {
-  //   const today = new Date();
-  //   const tomorrow = addDays(today, 1);
-  //   if (isSameDay(selectedDate, today)) dateLabel = lang('today');
-  //   else if (isSameDay(selectedDate, tomorrow)) dateLabel = lang('tomorrow');
-  //   else dateLabel = format(selectedDate, 'd MMM yyyy');
-  // }
+  // Handle Outside Click
+  useEffect(() => {
+    const handleClick = event => {
+      if (dateRef.current && !dateRef.current.contains(event.target)) {
+        setShowDropDown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClick);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+    };
+  }, []);
 
   return (
     <label
       htmlFor='date'
+      ref={dateRef}
+      onMouseDown={() => setShowDropDown(true)}
       className={`md:w-[calc((100%-70px)/3+70px)] md:!pe-[70px] md:rounded-e-full ${fieldStyles.label}`}
     >
-      <div className={`grid-cols-[24px_1fr] ${fieldStyles.inputContainer}`}>
+      <div className={`${fieldStyles.inputContainer}`}>
         <CalendarFill className={`size-6 ${homePage ? 'text-white' : 'text-primary'}`} />
         <input
           onChange={e => setDate(e.target.value)}
@@ -34,9 +44,18 @@ const DateField = ({ date, setDate, fieldStyles, homePage }) => {
           className={`${fieldStyles.input}`}
           readOnly
         />
+        {date ? (
+          <ClearInput onClick={() => setDate(null)} className={`size-5 text-r-text`} />
+        ) : (
+          <ArrowDown
+            className={`text-[#B4B4B4] size-5 transition-transform duration-300 ${
+              showDropdown ? '-rotate-180' : 'rotate-0'
+            }`}
+          />
+        )}
       </div>
 
-      {<DateDropdown date={date} setDate={setDate} setShowDropDown={setShowDropDown} />}
+      {showDropdown && <DateDropdown date={date} setDate={setDate} setShowDropDown={setShowDropDown} />}
     </label>
   );
 };

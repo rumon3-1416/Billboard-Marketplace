@@ -50,7 +50,7 @@ const SearchBar = ({ className }) => {
       {/* Search Btn */}
       <IconBtn
         variant='primary'
-        className='md:!-translate-y-1/2 md:!absolute md:!top-1/2 md:!right-2.5 !p-3.5 lg:!p-5 !mx-5 md:!mx-0 !mt-1 !mb-5 md:!mt-0 md:!mb-0'
+        className='md:!-translate-y-1/2 md:!absolute md:!top-1/2 md:!right-2.5 z-10 !p-3.5 lg:!p-5 !mx-5 md:!mx-0 !mt-1 !mb-5 md:!mt-0 md:!mb-0'
       >
         <MagnifyingGlass className='size-5' />
         <span className='md:hidden ms-1.5'>Search</span>
